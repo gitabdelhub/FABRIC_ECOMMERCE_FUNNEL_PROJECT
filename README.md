@@ -1,6 +1,6 @@
-# ShopFlow — E-Commerce Data Platform (Microsoft Fabric)
+# ShopFlow Powered by Microsoft Fabric
 
-Plateforme de données de bout en bout construite sur **Microsoft Fabric**, exploitant une architecture Medallion pour ingérer, transformer et modéliser plus de 15 millions d'événements de navigation e-commerce.
+Plateforme de données de bout en bout construite sur **Microsoft Fabric**, exploitant une architecture Medallion pour ingérer, transformer et modéliser plus de 15 millions d'événements de navigation sur un site e-commerce(vue, clique, ajout,retrait...)
 
 ---
 
@@ -18,7 +18,7 @@ L'objectif de ce projet est de mesurer la performance du tunnel d'achat d'un sit
 * **Accès analytique :** Exposition directe sous Power BI via **Direct Lake**, supprimant les latences de rafraîchissement d'import.
 
 ### Tableau de Bord Power BI (Direct Lake) :
-![Rapport Power BI - Entonnoir de Conversion](./screenshots/03_powerbi_funnel.png)
+![Rapport Power BI - Entonnoir de Conversion](./screenshots/FABRIC_ECOMMERCE_POWERBI.png)
 *(Figure 1 : Analyse visuelle du tunnel d'achat de la vue jusqu'à la conversion)*
 
 ---
@@ -83,7 +83,7 @@ La couche Gold est conçue pour optimiser les performances des requêtes analyti
 * **`dim_event_type`** : Typologie des interactions (`view`, `cart`, `remove_from_cart`, `purchase`).
 
 ### Modèle de Données Gold :
-![Modèle Relationnel en Étoile](./screenshots/02_gold_star_schema.png)
+![Modèle Relationnel en Étoile](./screenshots/FABRIC_ECOMMERCE_DATA_MODEL.png)
 *(Figure 2 : Schéma en étoile dans le SQL Analytics Endpoint)*
 
 ---
@@ -96,7 +96,7 @@ La couche Gold est conçue pour optimiser les performances des requêtes analyti
 
 ### Orchestration du Data Pipeline :
 ![Pipeline Fabric Orchestré](./screenshots/01_pipeline_orchestration.png)
-*(Figure 3 : Chaîne d'orchestration séquentielle Bronze -> Silver -> Gold)*
+*(Figure 3 : Chaîne d'orchestration séquentielle Bronze -> Silver -> Gold NB: l'image choisie est celle d'une pipeline qui n'a pas aboutie due au manque de Capacity)*
 
 ---
 
