@@ -100,15 +100,3 @@ La couche Gold est conçue pour optimiser les performances des requêtes analyti
 
 ---
 
-## 💼 5. Éléments pour CV / Entretien Technique
-
-### Description de projet pour CV :
-> **Data Engineer — Plateforme E-Commerce Fabric (ShopFlow)**  
-> *Microsoft Fabric, PySpark, Delta Lake, Power BI Direct Lake*
-> * Conçu une architecture Medallion (Bronze/Silver/Gold) traitant 15M+ événements de sessions utilisateurs.
-> * Développé des scripts PySpark pour l'ingestion multi-fichiers, le nettoyage et la déduplication de données.
-> * Modélisé un schéma en étoile (4 dimensions, 1 fait) optimisé pour l'analyse d'entonnoirs de conversion sous Power BI en mode Direct Lake.
-> * Automatisé le traitement complet via un Data Pipeline Fabric avec gestion de la concurrence des clusters Spark.
-
-### Point clé en entretien :
-> *"J'ai choisi une modélisation en étoile couplée au Direct Lake de Fabric pour éviter de saturer la mémoire Power BI avec les 15M de lignes, tout en conservant une réactivité sous la seconde sur les filtres par marque et par date."*
