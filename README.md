@@ -99,4 +99,19 @@ La couche Gold est conçue pour optimiser les performances des requêtes analyti
 *(Figure 3 : Chaîne d'orchestration séquentielle Bronze -> Silver -> Gold NB: l'image choisie est celle d'une pipeline qui n'a pas aboutie due au manque de Capacity)*
 
 ---
+## 🛠️ 5. Résilience Opérationnelle & Monitoring Cloud (Post-Mortem & Amélioration Continue)
+
+En conditions réelles d'ingénierie, la gestion des quotas de calcul et des fenêtres de ressources Cloud fait partie intégrante du rôle de Data Engineer.
+
+### Analyse de l'Incident de Capacité (HTTP 430 Livy Throttling) :
+Lors de l'orchestration séquentielle immédiate sur une capacité Fabric d'essai, l'enchaînement sans temps mort de sessions Spark distinctes a provoqué une saturation temporaire du pool (dépassement des Capacity Units / CUs) sur Notebook3.
+
+![Incident de Capacité Spark Throttling](./screenshots/04_pipeline_capacity_postmortem.png)
+*(Figure 4 : Détection du seuil de capacité Spark Livy lors de l'enchaînement immédiat des jobs)*
+
+### Mesures Correctives Implémentées :
+1. **Introduction d'activités de temporisation (Wait 60s) :** Permettant la destruction propre des sessions Livy et le retour à zéro des CUs entre chaque couche Medallion.
+2. **Écrasement explicite de schéma (overwriteSchema=true) :** Neutralisation des conflits de types Delta lors de l'ingestion de nouveaux lots de données mensuelles.
+3. **Activation du High Concurrency Mode :** Mutualisation d'une session Spark unique pour l'ensemble des activités du pipeline.
+
 
