@@ -95,7 +95,7 @@ La couche Gold est conçue pour optimiser les performances des requêtes analyti
 * **Orchestration :** Pipeline Fabric (`pl_shopflow_e2e`) enchaînant les étapes en dépendance conditionnelle (**Upon Success**).
 
 ### Orchestration du Data Pipeline :
-![Pipeline Fabric Orchestré](./screenshots/01_pipeline_orchestration.png)
+![Pipeline Fabric Orchestré](./screenshots/FABRIC_ECOMMERCE_PIPELINE_BUG.png)
 *(Figure 3 : Chaîne d'orchestration séquentielle Bronze -> Silver -> Gold NB: l'image choisie est celle d'une pipeline qui n'a pas aboutie due au manque de Capacity)*
 
 ---
