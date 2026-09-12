@@ -2,6 +2,7 @@
 
 Plateforme de données de bout en bout construite sur **Microsoft Fabric**, exploitant une architecture Medallion pour ingérer, transformer et modéliser plus de 15 millions d'événements de navigation sur un site e-commerce(vue, clique, ajout,retrait...)
 
+**DATASET** : https://www.kaggle.com/datasets/mkechinov/ecommerce-events-history-in-cosmetics-shop
 ---
 
 ## 📌 1. Vue Métier & Contexte Analytique
